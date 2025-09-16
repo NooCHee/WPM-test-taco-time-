@@ -101,7 +101,6 @@ textinput.addEventListener("input", () => {
   if (correct && typedText.length === currentText.length) {
     calculateresults();
   }
-  console.log(textinput);
 });
 
 
@@ -151,4 +150,5 @@ function checkWordpermin(wpm) {
 // i thought math would end after school T_T
 // i am also learning git hub and how to use it
 // this was supervised by a teacher (My brother he is pretty cool)
+
 
