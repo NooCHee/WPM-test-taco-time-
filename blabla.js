@@ -121,23 +121,39 @@ function createEmoji() {
 
 }
 
-function playRainingTacoSong() { 
-  const audio = document.getElementById("tacosong");
-  audio.play();
+// function playRainingTacoSong() { 
+//   const audio = document.getElementById("tacosong");
+//   audio.play();
   
 
-}
+// }
 
- function checkWordpermin(wpm) {
+//  function checkWordpermin(wpm) {
+//   if (wpm >= 50) {
+//     playRainingTacoSong();
+//     const tacoInterval = setInterval(createEmoji, 200);
+//     setTimeout(() => clearInterval(tacoInterval), 5000); 
+//   }
+  
+// console.log("it should work right?");
+// }
+
+function checkWordpermin(wpm) {
   if (wpm >= 50) {
-    playRainingTacoSong();
+    const audio = document.getElementById("tacosong");
+    audio.currentTime = 28; 
+    audio.play();
     const tacoInterval = setInterval(createEmoji, 200);
-    setTimeout(() => clearInterval(tacoInterval), 5000); 
+    setTimeout(() => {
+      clearInterval(tacoInterval);
+      audio.pause();
+      audio.currentTime = 0; 
+    }, 10000);
   }
-  
-console.log("it should work right?");
 }
+
   // I HATE JAVASCRIPT SO MUCH IT TOOK ME 5 HOURS TO FIGURE OUT THAT I NEEDED TO CALL THE FUNCTION
 // i thought math would end after school T_T
 // i am also learning git hub and how to use it
+
 // this was supervised by a teacher (My brother he is pretty cool)
