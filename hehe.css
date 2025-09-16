@@ -42,7 +42,7 @@ textarea {
   width: 100%;
   height: 120px;
   padding: 10px;
-  border: 2px solid #ffffff;
+  border: 2px solid #106725;
   border-radius: 5px;
   font-size: 1rem;
   resize: none;
@@ -90,5 +90,6 @@ button:hover {
 @keyframes fall {
   to { transform: translateY(110vh); }
 }
+
 
 /* i wish java script was like this IT LIKE SO SIMPLE YOU JUST WRITE THE COLOR OR THING AND IT WORKS BOOM */
