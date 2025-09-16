@@ -12,11 +12,11 @@ let isRunning = false;
 let currentText = "";
 
 const texts = [
-  "javascript making me go CRAZY",
-  "why is javascript so hard",
-  "i am the best developer ever",
-  "coding is quite fun but it also makes me go crazy",
-  "i want to be the best in this work"
+  "javascript is so not fun",
+  "why is javascript so annoying",
+  "a note was pinned to the board",
+  "a breeze came through the window",
+  "clouds moved across the sky"
 ];
 // this is for starting the test it uses mathfloor to round the number so it doesnt show 
 // decimals and stuff it took me so MUCH TO FIGURE THIS OUTTTTT I HATE JAVASCRIPT
@@ -66,7 +66,7 @@ function calculateresults() {
   const correctChars = typedText.split("").filter((char, i) => char === currentText[i]).length;
   const accuracy = Math.round((correctChars / currentText.length) * 100);
 
-  const timeTaken = (new Date() - startTime) / 1000 / 60; // minutes
+  const timeTaken = (new Date() - startTime) / 1000 / 60;
   const wordsTyped = typedText.trim().split(/\s+/).length;
   const wpm = Math.round(wordsTyped / timeTaken);
 
@@ -121,23 +121,6 @@ function createEmoji() {
 
 }
 
-// function playRainingTacoSong() { 
-//   const audio = document.getElementById("tacosong");
-//   audio.play();
-  
-
-// }
-
-//  function checkWordpermin(wpm) {
-//   if (wpm >= 50) {
-//     playRainingTacoSong();
-//     const tacoInterval = setInterval(createEmoji, 200);
-//     setTimeout(() => clearInterval(tacoInterval), 5000); 
-//   }
-  
-// console.log("it should work right?");
-// }
-
 function checkWordpermin(wpm) {
   if (wpm >= 50) {
     const audio = document.getElementById("tacosong");
@@ -152,8 +135,20 @@ function checkWordpermin(wpm) {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
   // I HATE JAVASCRIPT SO MUCH IT TOOK ME 5 HOURS TO FIGURE OUT THAT I NEEDED TO CALL THE FUNCTION
 // i thought math would end after school T_T
 // i am also learning git hub and how to use it
-
 // this was supervised by a teacher (My brother he is pretty cool)
+
