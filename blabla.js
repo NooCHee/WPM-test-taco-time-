@@ -66,14 +66,14 @@ function calculateresults() {
   const correctChars = typedText.split("").filter((char, i) => char === currentText[i]).length;
   const accuracy = Math.round((correctChars / currentText.length) * 100);
 
-  const timeTaken = (new Date() - startTime) / 1000 / 60;
+  const timeTaken = (new Date() - startTime) / 1000 / 60; 
   const wordsTyped = typedText.trim().split(/\s+/).length;
   const wpm = Math.round(wordsTyped / timeTaken);
 
   accuracyS.innerText = isNaN(accuracy) ? 0 : accuracy;
   wpmS.innerText = isNaN(wpm) ? 0 : wpm;
-  
-checkWordpermin(wpm);
+  playRainingTacoSong(wpm);
+// checkWordpermin(wpm);
 }
 
 textinput.addEventListener("input", () => {
@@ -120,27 +120,75 @@ function createEmoji() {
 
 }
 
-function checkWordpermin(wpm) {
-  if (wpm >= 50) {
-    const audio = document.getElementById("tacosong");
-    audio.currentTime = 28; 
-    audio.play();
+// function playRainingTacoSong() { 
+//   const audio = document.getElementById("tacosong");
+//   audio.play();
+// }
+
+//  function checkWordpermin(wpm) {
+//   
+//     playRainingTacoSong();
+//     
+//     setTimeout(() => clearInterval(tacoInterval), 5000); 
+//   }
+  
+
+
+
+// function checkWordpermin(wpm) {
+//   if (wpm >= 50) {
+//   const audio = document.getElementById("tacosong");
+//   audio.play();
+//   setTimeout(() => {
+//     clearInterval(tacoInterval);
+//     audio.pause();           
+//     audio.currentTime = 0;   
+//   }, 5000); 
+// }
+
+// // console.log("it should work right?");
+// // }
+// function checkWordpermin(wpm) {
+//   if (wpm >= 50) {
+//     const audio = document.getElementById("tacosong");
+//     audio.currentTime = 0; 
+//     audio.play();
+
+
+//     const tacoInterval = setInterval(createEmoji, 200);
+
+
+//     setTimeout(() => {
+//       clearInterval(tacoInterval);
+//       audio.pause();
+//       audio.currentTime = 0; 
+//     }, 10000);
+//   }
+
+
+function playAudio() {
+  const audio = document.getElementById("tacosong");
+  audio.play();
+   audio.currentTime = 28;
+}
+
+function playRainingTacoSong (wpm) {
+  if (wpm >= 50) { 
+   
+    playAudio();
     const tacoInterval = setInterval(createEmoji, 200);
+
+    setTimeout(() => clearInterval(tacoInterval), 5000);
+
     setTimeout(() => {
-      clearInterval(tacoInterval);
-      audio.pause();
-      audio.currentTime = 0; 
+      const audio = document.getElementById("tacosong");
+      if (audio) {
+        audio.pause();
+       
+      }
     }, 10000);
   }
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -150,5 +198,6 @@ function checkWordpermin(wpm) {
 // i thought math would end after school T_T
 // i am also learning git hub and how to use it
 // this was supervised by a teacher (My brother he is pretty cool)
+
 
 
