@@ -197,7 +197,8 @@ function playRainingTacoSong (wpm) {
   // I HATE JAVASCRIPT SO MUCH IT TOOK ME 5 HOURS TO FIGURE OUT THAT I NEEDED TO CALL THE FUNCTION
 // i thought math would end after school T_T
 // i am also learning git hub and how to use it
-// this was supervised by a teacher (My brother he is pretty cool)
+
+
 
 
 
